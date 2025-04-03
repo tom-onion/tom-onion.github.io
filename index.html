@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tom's - Portfolio</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/image.png" rel="noopener noreferrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" rel="noopener noreferrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" rel="noopener noreferrer" />
+  <link rel="stylesheet" href="./styles.css" rel="noopener noreferrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Offside&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    mark {
+      background-color: #61dafb;
+      color: #e2f8ff;
+      border-radius: 7px;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
+</head>
+
+<body style="background: linear-gradient(to top right, #e05568, #ed8c69);">
+  <header>
+     <nav>
+      <div class="logo">
+      <span class="fa-solid fa-code"></span>
+      <span title="Hey what's up" class="playwrite-de-grund">Tom</span>
+      </div>
+      <ul id="menuList">
+        <li><a href="#" class="peter" title="We will make memories that will last a lifetime 💖">HOME</a></li>
+        <li><a href="#about" title="Hello! I'm Dhaya, a tech enthusiast! 💻" class="peter">ABOUT</a></li>
+        <li><a href="#skills" title="Cybersecurity Specialist | Ethical Hacker 📍" class="peter">SKILLS</a></li>
+        <li><a href="#projects" title="Turning ideas into visual magic! 🌈" class="peter">PROJECTS</a></li>
+        <li><a href="#contact" title="Contact for behind-the-scenes! 🌟" class="peter">CONTACT</a></li>
+      </ul>
+      <div class="menu-icon">
+      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+    </nav>
+  </header>
+<a href="https://ko-fi.com/tomonion">
+  <button class="contain">
+    <span class="effect orange_effect"></span>
+    <span class="effect white_effect"></span>
+    <div class="heart heart_left"></div>
+    <div class="heart heart_right"></div>
+    <div class="like">Buy Me a Coffee</div>
+  </button>
+</a>
+  <main>
+    <section class="hero container">
+      <div class="hero-blue">
+        <div>
+          <h1>
+            <small class="btn-shine">Hey I'm</small>
+            <span data-text=" Dhayananth" class="text" style="font-size: 1.5em;">Dhayananth</span>
+          </h1>
+          <p class="jost">
+            <figure class="obito">
+            Enthusiastic about cybersecurity, I aspire to design safe, accessible websites while learning new cyber
+          </figure><figure class="obito">
+            threats. My aim is to know what cybercriminals do so that I can craft anticipatory remedies that shield
+            </figure><figure class="obito">
+            users and promote an online environment where they are safe.
+          </figure>
+            <br><br><span class="jost-bold">I'm interested in Cyber Security topics.</span>
+          </p><br>
+          <!--<div class="call-to-action">
+            <a href="" class="button white">
+                View Resume </a>
+                <a href="#contact">Contact</a>
+          </div>-->
+          <div class="social-links">
+            <a href="https://github.com/tom-onion">
+            <div class="button-icon">
+              <div class="icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                    fill="#222229"
+                  ></path>
+                </svg>
+              </div>
+              <div class="cube">
+                <span class="side front">tom-onion</span>
+                <span class="side top">on github</span>
+              </div>
+            </div>            
+          </a>
+            <!--
+            <a href="https://www.linkedin.com/in/dhaya-nanth-3510a6353/">
+              <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/linkedin.png"
+                alt="LinkedIn" width="48" />-->
+          </div>
+        </div>
+      </div>
+      <div class="hero-yellow">
+        <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/FINALLLLL.png"
+          alt="hero"  style="padding-bottom: 20px; padding-top: -1; padding-right: 15px; width: 450px; height: auto;"/>
+      </div> 
+    </section>
+    <section class="logos container">
+      <div class="marquee">
+        <div class="track">
+          <a href="https://github.com/tom-onion">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/cybersec.png"
+              width="128" alt="Cyber Security" />
+          </a>
+          <a href="https://www.raspberrypi.com/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/pico.png"
+              width="128" alt="Raspberry Pi" />
+          </a>
+          <a href="https://github.com">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/github.png"
+              width="128" alt="Github" />
+          </a>
+          <a href="https://html.com">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/html.png"
+              alt="HTML" width="128" />
+          </a>
+          <a href="https://www.geeksforgeeks.org/css-introduction/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/css.png" alt="CSS"
+              width="128" />
+          </a>
+          <a href="https://www.geeksforgeeks.org/javascript/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/javascript.png"
+              alt="JS" width="128" />
+          </a>
+          <a href="https://www.php.net/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/php.png" alt="PHP"
+              width="128" />
+          </a>
+          <a href="https://filmora.wondershare.com/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/filimora.png"
+              width="128" alt="Filimora" />
+          </a>
+          <a href="https://www.canva.com/en_in/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/canva.png"
+              width="128" alt="Canva" />
+          </a>
+          <a href="https://code.visualstudio.com/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/vscode.png"
+              width="128" alt="VS Code" />
+          </a>
+          <a href="https://github.com/tom-onion">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/cybersec.png"
+              width="128" alt="Cyber Security" />
+          </a>
+          <a href="https://www.raspberrypi.com/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/pico.png"
+              width="128" alt="Raspberry Pi" />
+          </a>
+          <a href="https://github.com">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/github.png"
+              width="128" alt="Github" />
+          </a>
+          <a href="https://html.com">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/html.png"
+              alt="HTML" width="128" />
+          </a>
+          <a href="https://www.geeksforgeeks.org/css-introduction/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/css.png" alt="CSS"
+              width="128" />
+          </a>
+          <a href="https://www.geeksforgeeks.org/javascript/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/javascript.png"
+              alt="JS" width="128" />
+          </a>
+          <a href="https://www.php.net/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/php.png" alt="PHP"
+              width="128" />
+          </a>
+          <a href="https://filmora.wondershare.com/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/filimora.png"
+              width="128" alt="Filimora" />
+          </a>
+          <a href="https://www.canva.com/en_in/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/canva.png"
+              width="128" alt="Canva" />
+          </a>
+          <a href="https://code.visualstudio.com/">
+            <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/vscode.png"
+              width="128" alt="VS Code" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about container">
+      <h2><small style=" font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;">All</small><span
+          style=" font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">About me</span></h2>
+    <div class="card" id="card">
+      <div class="content">
+      <div class="holder-blue">
+        <div class="left-column">
+          <h3 class="lexend">A bit about me</h3>
+          <p class="uchiha">
+            જ⁀➴ | Cyberattack strategist <br>
+            ᯓ🕵🏻‍♀️| Curiosity in vulnerability scanning <br>
+            ᯓ⚠️| Trust your Scripts, not strangers <br>
+            ᯓ🕊️| The best exploits are found in patient minds <br>
+            ᯓ🍂| If i die donate my middle finger to <mark>Education System</mark>
+          </p>
+        </div>
+        <div class="right-column">
+          <h3 class="lexend">Education</h3>
+          <div class="info">
+            <a href="https://gascgobi.ac.in">
+              <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Portfolio/gasc.png"
+                width="70px" alt="GASC" />
+            </a>
+            <div class="details">
+              <h4>
+                <a href="https://gascgobi.ac.in">Gobi Arts & Science College
+                  <i class="uchiha" style="font-weight: 400">(Ongoing)</i>
+                </a>
+              </h4>
+              <p class="uchiha">B.Sc., Computer Science</p>
+              <small class="uchiha">2023 - 2027</small>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+    <section id="skills" class="skills container">
+      <div class="pakage">
+        <div class="pakage2">
+      <h2>
+        <small style=" font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;">My</small>
+        <span
+          style="font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Skills</span>
+      </h2><div class="card" id="card">
+        <div class="content">
+      <div class="holder-blue">
+        <div class="left-column">
+          <h3 class="lexend">Frontend</h3>
+          <ul><div class="jost">
+            <li><a href="https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html"
+              >HTML</a></li>
+            <li><a href="https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html#css"
+              >CSS</a></li>
+            <li><a href="https://github.com/krishnr/JavaScript-cheat-sheet/blob/master/README.md"
+              >Javascript</a></li>
+          </ul>
+          <h3 class="lexend">Backend</h3>
+          <ul><div class="jost">
+            <li><a href="https://github.com/smknstd/modern-php-cheatsheet/blob/main/README.md">PHP</a>
+            </li>
+            <li><a href="https://github.com/krishnr/JavaScript-cheat-sheet/blob/master/README.md"
+              >Javascript</a></li>
+          </ul>
+          <h3 class="lexend">Scripting</h3>
+          <ul><div class="jost">
+            <li><a href="https://github.com/RehanSaeed/Bash-Cheat-Sheet/blob/main/README.md">Bash</a>
+            </li>
+            <li><a href="https://github.com/ameeya-bhusan/Shell_Scripting_cheat_sheet/blob/main/README.md"
+              >Shell Scripting</a></li>
+            <li><a href="https://github.com/krishnr/JavaScript-cheat-sheet/blob/master/README.md"
+              >Javascript</a></li><br>
+            <li><a href="https://github.com/gkhays/cheatsheets/blob/master/WindowsBatch-CheatSheet.md"
+              >Batch</a></li>
+            <li><a href="https://gist.github.com/pcgeek86/336e08d1a09e3dd1a8f0a30a9fe61c8a"
+              >Powershell</a></li>
+            <li><a href="https://github.com/smknstd/modern-php-cheatsheet/blob/main/README.md">PHP</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right-column">
+          <h3 class="lexend">Programming Languages</h3>
+          <ul><div class="jost">
+            <li><a href="https://github.com/alhassy/CCheatSheet/blob/master/README.md">C</a></li>
+            <li><a href="https://github.com/mortennobel/cpp-cheatsheet/blob/master/cheatsheet-as-sourcefile.cpp"
+              >C++</a></li>
+            <li><a href="https://github.com/krishnr/JavaScript-cheat-sheet/blob/master/README.md"
+              >JavaScript</a></li>
+            <li><a href="https://github.com/in28minutes/java-cheat-sheet/blob/master/README.md">Java</a>
+            </li>
+          </ul>
+          <h3 class="lexend">Version Control</h3>
+          <ul><div class="jost">
+            <li><a href="https://github.com">GitHub</a></li>
+            <li><a href="https://gitlab.com">GitLab</a></li></div>
+          </ul>
+          <h3 class="lexend">Others</h3>
+          <ul><div class="jost">
+            <li><a href="https://github.com/sudheerj/Linux-cheat-sheet/blob/master/README.md">Linux</a>
+            </li>
+            <li><a href="https://www.raspberrypi.com/">Raspberry PI</a></li></div>
+          </ul>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+    </section>
+    <section id="projects" class="projects container">
+      <h2>
+        <small style="font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;"> Previous </small>
+        <span style="font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Completed Projects</span>
+      </h2>
+      <div class="projects-grid">
+        <a href="https://tom-onion.github.io/PROJECTS/img-prev/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Image-Preview.png" alt="BGCCI"
+            width="100%" />
+        </a>
+        <a href="https://tom-onion.github.io/PROJECTS/to-do/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Todo-List.png" alt="BGCCI"
+            width="100%" />
+        </a>
+        <a href="https://tom-onion.github.io/PROJECTS/rand-color/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Color-Changer.png" alt="BGCCI"
+            width="100%" />
+        </a>
+        <a href="https://tom-onion.github.io/PROJECTS/form-validator/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Login-Form-Validation.png"
+            alt="BGCCI" width="100%" />
+        </a>
+        <a href="https://tom-onion.github.io/PROJECTS/parallax/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Parallax.png" alt="BGCCI"
+            width="100%" />
+        </a>
+        <a href="https://tom-onion.github.io/PROJECTS/games/ping-pong/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/Ping%20Pong.png" alt="BGCCI"
+            width="100%" />
+        </a>
+        <a href="https://tom-onion.github.io/PROJECTS/hover-animation/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/hover.png" alt="BGCCI"
+            width="100%" />
+        </a>
+        <a href="https://tom-onion.github.io/PROJECTS/form-validator/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/form.png" alt="BGCCI"
+            width="100%" />
+        </a>
+        <a href="https://tom-onion.github.io/PROJECTS/radio-btn/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/radio.png" alt="BGCCI"
+            width="100%" />
+        </a>
+        <a href="https://tom-onion.github.io/PROJECTS/games/car-game/" class="projects-item">
+          <img src="https://raw.githubusercontent.com/tom-onion/tom-onion/refs/heads/main/car-game.png" alt="BGCCI"
+            width="100%" />
+        </a>
+      </div>
+    </section>
+    <section id="contact" class="contact container">
+      <h2>
+        <small style="font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;">Hire &</small>
+        <span style="font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Contact Me</span>
+      </h2>
+      <p class="jost">
+        Have some suggestions for me? Or perhaps something else?<br />
+        Don't hesitate to drop me a line.
+      </p>
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p class="heading">Email:</p>
+          <p>
+            <a style="color: aqua;" href="mailto:nanthdhaya7@outlook.com" class="jost-bold">nanthdhaya7@outlook.com</a>
+          </p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p class="heading">Mobile Number:</p>
+          <p>
+            <a href="tel:+916382872982" style="color: aqua;" class="jost-bold">+91 6382872982</a>
+          </p>
+        </div>
+        <div class="info-item">
+          <i class="fab fa-linkedin"></i>
+          <p class="heading">LinkedIn:</p>
+          <p>
+            <a href="https://www.linkedin.com/in/dhaya-nanth-3510a6353/" style="color: aqua; " class="jost-bold">LinkedIn Profile</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer container">
+    <div class="footer-content">
+      <p><i>github.com/tom-onion</i></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/dhaya-nanth-3510a6353/" class="social-icon">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/tom-onion" class="social-icon">
+          <i class="fa-brands fa-square-github"></i>
+        </a>
+        <a href="https://x.com/q91269936" class="social-icon">
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/toxic_friends_forever/" class="social-icon">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="./scripts.js" rel="noopener noreferrer"></script>
+</body>
+
+</html>
