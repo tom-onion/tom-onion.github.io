@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CircuitPython Guide for RP2040</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background-color: #4b0082;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #4b0082;
+      margin-top: 30px;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #eee;
+    }
+    a {
+      color: #4b0082;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CircuitPython Programming Guide for RP2040</h1>
+  </header>
+
+  <h2>Extended Introduction to CircuitPython</h2>
+  <p>CircuitPython is a programming language designed to simplify experimenting and learning to code on low-cost microcontroller boards. It is based on Python, one of the most widely used and beginner-friendly languages in the world.</p>
+  <p>CircuitPython is designed with education in mind. It eliminates the need for complicated toolchains, embedded compilers, or even special drivers. Just plug in the board, open the USB drive that appears, and edit <code>code.py</code> in any text editor. Save the file and it runs immediately on the device.</p>
+  <h3>Why Choose CircuitPython?</h3>
+  <ul>
+    <li><strong>Instant feedback:</strong> The code runs as soon as you save it.</li>
+    <li><strong>REPL (Read-Eval-Print Loop):</strong> Directly interact with the board and test ideas live.</li>
+    <li><strong>Library ecosystem:</strong> Tons of ready-to-use libraries for sensors, displays, and communication modules.</li>
+    <li><strong>Cross-platform:</strong> Works on Windows, macOS, Linux, and ChromeOS.</li>
+    <li><strong>Friendly errors:</strong> CircuitPython shows helpful error messages to help beginners fix mistakes.</li>
+  </ul>
+
+  <h3>How It Works</h3>
+  <p>When you flash a CircuitPython .uf2 file to your RP2040 board, the microcontroller emulates a USB drive called <code>CIRCUITPY</code>. Inside, you’ll find <code>code.py</code> and a <code>lib</code> folder. The board automatically executes <code>code.py</code> every time it starts or the file changes.</p>
+
+  <h3>REPL Interface</h3>
+  <p>The REPL lets you type Python commands directly to the board. You can use it to test snippets of code, explore modules, and interactively debug your programs. To enter REPL in Thonny, open the Shell and press <code>Ctrl+D</code> to restart or use the serial terminal.</p>
+
+  <h3>Common Use Cases</h3>
+  <ul>
+    <li>Prototyping wearable electronics</li>
+    <li>Home automation with sensors and relays</li>
+    <li>Teaching Python basics with real-world feedback</li>
+    <li>Data logging via USB or microSD</li>
+    <li>Making custom USB keyboards or gamepads</li>
+  </ul>
+
+  <h3>How CircuitPython Differs from MicroPython</h3>
+  <ul>
+    <li>CircuitPython is a fork of MicroPython with improved hardware support and libraries.</li>
+    <li>CircuitPython emphasizes ease of use and user experience for education.</li>
+    <li>MicroPython may support more microcontrollers, but CircuitPython focuses on consistent APIs and beginner-friendly hardware.</li>
+  </ul>
+
+  <h3>Best Boards for CircuitPython</h3>
+  <ul>
+    <li>Adafruit Feather RP2040</li>
+    <li>Raspberry Pi Pico (with CircuitPython firmware)</li>
+    <li>Adafruit ItsyBitsy RP2040</li>
+    <li>Trinkey QT2040</li>
+    <li>Maker Pi Pico / Maker Pi RP2040</li>
+  </ul>
+
+  <h3>Advanced Features You Can Try</h3>
+  <ul>
+    <li>Creating custom USB HID devices (keyboard/mouse/macros)</li>
+    <li>Using asyncio for concurrent tasks</li>
+    <li>Connecting to WiFi with ESP32 co-processors</li>
+    <li>Reading/writing to EEPROM or I2C sensors</li>
+    <li>Controlling NeoPixels and DotStars</li>
+    <li>Generating audio with PWM and DAC</li>
+  </ul>
+
+  <h3>Tips for Beginners</h3>
+  <ul>
+    <li>Always safely eject the CIRCUITPY drive before unplugging</li>
+    <li>Use a separate text editor like Mu or Thonny for safety</li>
+    <li>Use REPL to test one line of code at a time</li>
+    <li>Keep your code simple and build in small parts</li>
+    <li>Join the Adafruit Discord or forums for help</li>
+  </ul>
+
+  <h3>Where to Go Next</h3>
+  <ul>
+    <li>Try combining inputs and outputs — like controlling LEDs with sensors</li>
+    <li>Build real-world projects like a smart plant monitor or stopwatch</li>
+    <li>Explore the Adafruit Learning System for hundreds of guided tutorials</li>
+    <li>Contribute back — improve examples or write guides for others!</li>
+  </ul>
+
+  <h3>Final Thoughts</h3>
+  <p>CircuitPython opens up a whole world of creativity and embedded programming using the language you already know — Python! It brings hardware to life for beginners, students, hobbyists, and educators.</p>
+
+  <!-- The rest of the original content remains unchanged below -->
+
+  <h3>Exploring CircuitPython Libraries in Depth</h3>
+  <p>The true power of CircuitPython lies in its library ecosystem. Libraries in CircuitPython are often written in pure Python or as pre-compiled .mpy files for efficiency. You can store them in the <code>/lib</code> folder inside the CIRCUITPY drive.</p>
+
+  <h4>Popular Libraries to Start With:</h4>
+  <ul>
+    <li><strong>adafruit_circuitplayground</strong> – for Circuit Playground Express/Bluefruit features</li>
+    <li><strong>adafruit_motor</strong> – support for DC motors, stepper motors, and servo motors</li>
+    <li><strong>adafruit_neopixel</strong> – RGB LED control</li>
+    <li><strong>adafruit_lis3dh</strong> – accelerometer library</li>
+    <li><strong>adafruit_dht</strong> – read temperature and humidity sensors</li>
+    <li><strong>adafruit_display_text</strong> – display labels and text on screens</li>
+    <li><strong>adafruit_displayio_layout</strong> – layouts for UI elements</li>
+  </ul>
+
+  <h4>Example: Using NeoPixels</h4>
+  <pre><code>import board
+import neopixel
+import time
+
+pixels = neopixel.NeoPixel(board.GP0, 8)
+
+while True:
+    pixels.fill((255, 0, 0))  # Red
+    time.sleep(1)
+    pixels.fill((0, 255, 0))  # Green
+    time.sleep(1)
+    pixels.fill((0, 0, 255))  # Blue
+    time.sleep(1)</code></pre>
+
+  <h4>USB HID Example: Turn RP2040 into a Keyboard</h4>
+  <pre><code>import usb_hid
+from adafruit_hid.keyboard import Keyboard
+from adafruit_hid.keycode import Keycode
+import board
+import digitalio
+import time
+
+kbd = Keyboard(usb_hid.devices)
+button = digitalio.DigitalInOut(board.GP14)
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP
+
+while True:
+    if not button.value:
+        kbd.send(Keycode.A)
+        time.sleep(0.5)</code></pre>
+
+  <h4>File Logging Example</h4>
+  <pre><code>import time
+
+while True:
+    with open("log.txt", "a") as f:
+        f.write("Hello at " + str(time.monotonic()) + "
+")
+    time.sleep(1)</code></pre>
+
+  <h3>How CircuitPython Helps in Education</h3>
+  <p>CircuitPython has been adopted widely in schools and maker spaces because it reduces the barrier to entry. Students don't need to install complex software or learn complicated syntax. They write Python — and instantly see the effect on real-world hardware.</p>
+  <ul>
+    <li>Simple workflow: Edit → Save → Run</li>
+    <li>Rich documentation and community support</li>
+    <li>Ideal for rapid prototyping and demonstration</li>
+  </ul>
+
+  <p>As you continue to explore, keep experimenting and breaking things — it’s the best way to learn hardware and embedded coding!</p>
+
+  <h2>🧩 HID Devices and Prevention Tips</h2>
+
+  <h3>What is USB HID?</h3>
+  <p>HID stands for <strong>Human Interface Device</strong>. CircuitPython lets your RP2040 behave like a keyboard, mouse, or game controller using the <code>adafruit_hid</code> library.</p>
+
+  <h4>Example: Acting as a USB Keyboard</h4>
+  <pre><code>import usb_hid
+from adafruit_hid.keyboard import Keyboard
+from adafruit_hid.keycode import Keycode
+import time
+import board
+import digitalio
+
+kbd = Keyboard(usb_hid.devices)
+btn = digitalio.DigitalInOut(board.GP14)
+btn.direction = digitalio.Direction.INPUT
+btn.pull = digitalio.Pull.UP
+
+while True:
+    if not btn.value:
+        kbd.send(Keycode.WINDOWS, Keycode.R)
+        time.sleep(0.2)
+        kbd.send(Keycode.A)
+        time.sleep(1)</code></pre>
+
+  <h3>⚠️ HID Risks and Security</h3>
+  <p>Since HID can send keystrokes or mouse actions, it's sometimes used for:</p>
+  <ul>
+    <li>Launching commands without user permission</li>
+    <li>Opening dangerous URLs or deleting files</li>
+    <li>Automating malware injection (like BadUSB attacks)</li>
+  </ul>
+
+  <h3>🛡 How to Protect Against Malicious HID Devices</h3>
+  <ul>
+    <li>Don't plug in unknown USB devices, especially homemade ones</li>
+    <li>Use USB data blockers (sync stops, charge-only adapters)</li>
+    <li>Disable USB HID at the OS level via group policy or kernel settings (advanced)</li>
+    <li>Use endpoint monitoring software on your PC</li>
+    <li>Scan `.py` files before running on any CIRCUITPY drive</li>
+  </ul>
+
+  <p>While HID makes fun automation projects possible (like macros or stream decks), always use it responsibly — and never use CircuitPython projects to intrude on someone else’s system without consent.</p>
+
+</body>
+</html>
