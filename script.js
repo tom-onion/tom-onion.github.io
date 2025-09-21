@@ -199,19 +199,19 @@ const animateCounter = () => {
 };
 
 // Trigger counter animation when in viewport
-const counterSection = document.querySelector('.cyber-stats');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounter();
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
+// const counterSection = document.querySelector('.cyber-stats');
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             animateCounter();
+//             observer.unobserve(entry.target);
+//         }
+//     });
+// }, { threshold: 0.5 });
 
-if (counterSection) {
-    observer.observe(counterSection);
-}
+// if (counterSection) {
+//     observer.observe(counterSection);
+// }
 
 // Animate skill progress bars when in view
 const skillBars = document.querySelectorAll('.progress-bar');
@@ -903,3 +903,4 @@ Add this CSS to your stylesheet for the hover effect:
         observer.observe(gradientTextEl);
     });
 })();
+
