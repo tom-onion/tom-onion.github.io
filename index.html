@@ -2,19 +2,20 @@
 <html lang="en">
 
 <head>
-    <script>
+<script>
 const SUPABASE_URL = "https://esegyzqhmdhqwvsevdyv.supabase.co";
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVzZWd5enFobWRocXd2c2V2ZHl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3NjkwMDAsImV4cCI6MjA5MDM0NTAwMH0.uoOokE2bsRPZCJJtmSs5wsB3p0c3giaTyLBNLtGWb_g";
 
 async function logVisitor() {
   try {
-    // Get IP
-    const ipRes = await fetch("https://api.ipify.org?format=json");
-    const ipData = await ipRes.json();
+    // Get location data
+    const res = await fetch("https://ipapi.co/json/");
+    const data = await res.json();
 
-    // Collect data
-    const data = {
-      ip: ipData.ip,
+    const visitor = {
+      ip: data.ip,
+      country: data.country_name,
+      city: data.city,
       user_agent: navigator.userAgent
     };
 
@@ -26,7 +27,7 @@ async function logVisitor() {
         "apikey": SUPABASE_KEY,
         "Authorization": `Bearer ${SUPABASE_KEY}`
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(visitor)
     });
 
   } catch (err) {
@@ -34,7 +35,6 @@ async function logVisitor() {
   }
 }
 
-// Run on page load
 logVisitor();
 </script>
     <!-- Google tag (gtag.js) -->
