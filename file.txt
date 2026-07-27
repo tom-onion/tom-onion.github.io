@@ -4,6 +4,13 @@ https://en.wikipedia.org/wiki/Ray_tracing_(physics)
 https://simple.wikipedia.org/wiki/Ray_tracing
 https://en.wikipedia.org/wiki/Structure_mapping_engine
 https://en.wikipedia.org/wiki/Nearest_neighbor_search
+https://en.wikipedia.org/wiki/Ray_casting
+https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
+https://www.quora.com/How-can-I-calculate-the-breaking-point-of-a-beam
+https://en.wikipedia.org/wiki/Trajectory
+https://en.wikipedia.org/wiki/Navigational_algorithms
+
+
 
 
 
