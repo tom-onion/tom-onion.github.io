@@ -2,8 +2,8 @@ https://en.wikipedia.org/wiki/Occupancy_grid_mapping
 https://en.wikipedia.org/wiki/Ray_tracing_(graphics)
 https://en.wikipedia.org/wiki/Ray_tracing_(physics)
 https://simple.wikipedia.org/wiki/Ray_tracing
-
-
+https://en.wikipedia.org/wiki/Structure_mapping_engine
+https://en.wikipedia.org/wiki/Nearest_neighbor_search
 
 
 
